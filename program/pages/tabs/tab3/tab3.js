@@ -22,15 +22,15 @@ Page({
     showTag: false,
     showPrivacyPicker: false
   },
-  displayTagCheckbox: function (e) {
+  displayFromCheckbox: function (e) {
     console.log(e)
     wx.navigateTo({
-      url: '/pages/tabs/tab3/tag-choose'
+      url: '/pages/tabs/tab3/from-choose'
     })
   },
-  displayTagCheckbox: function () {
+  displayToCheckbox: function (e) {
     wx.navigateTo({
-      url: '/pages/tabs/tab3/tag-choose'
+      url: '/pages/tabs/tab3/to-choose'
     })
   },
   displayPrivacyPicker: function () {

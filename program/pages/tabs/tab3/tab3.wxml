@@ -50,24 +50,30 @@
   </van-row>
   <view class="blank"/>
   <van-row>
-    <van-col wx:for="{{ pic.tags }}"wx:key="index" offset="1">
+    <van-col  offset="1">
       <van-tag
-        
+      type="danger"
         round
-        id="{{ index }}"
-        
         size="medium"
-      >{{ item }}
+      >from:{{ pic.from_tag }}
+      </van-tag>
+    </van-col>
+    <van-col  offset="10">
+      <van-tag
+      type="danger"
+        round
+        size="medium"
+      >to:{{ pic.to_tag }}
       </van-tag>
     </van-col>
   </van-row>
   <view class="blank"/>
   <van-row>
     <van-col offset="1">
-      <van-button id="1" round plain icon="label-o" bindtap="displayTagCheckbox">起始地点</van-button>
+      <van-button id="1" round plain icon="label-o" bindtap="displayFromCheckbox">起始地点</van-button>
     </van-col>
     <van-col offset="6">
-      <van-button id="2" round plain icon="label-o" bindtap="displayTagCheckbox">目的地</van-button>
+      <van-button id="2" round plain icon="label-o" bindtap="displayToCheckbox">目的地</van-button>
     </van-col>
   </van-row>
   <view class="blank" />

@@ -1,5 +1,6 @@
 {
   "pages": [
+
     "pages/login/login",
     "pages/register/register",
     "pages/tabs/tab1/tab1",
@@ -7,7 +8,7 @@
     "pages/user-detail/user-detail",
     "pages/user-detail/user-furtherinfo",
     "pages/tabs/tab2/tab2",
-    "pages/tabs/tab3/tab3",
+        "pages/tabs/tab3/tab3",
     "pages/tabs/tab3/tag-choose",
     "pages/tabs/tab4/tab4",
     "pages/tabs/tab4/my-comment",
