@@ -1,0 +1,70 @@
+{
+  "pages": [
+    "pages/login/login",
+    "pages/register/register",
+    "pages/tabs/tab1/tab1",
+    "pages/pic-detail/pic-detail",
+    "pages/user-detail/user-detail",
+    "pages/user-detail/user-furtherinfo",
+    "pages/tabs/tab2/tab2",
+    "pages/tabs/tab3/tab3",
+    "pages/tabs/tab3/tag-choose",
+    "pages/tabs/tab4/tab4",
+    "pages/tabs/tab4/my-comment",
+    "pages/tabs/tab4/like",
+    "pages/tabs/tab5/tab5",
+    "pages/user-edit/edit",
+    "pages/user-edit/edit-pwd",
+    "pages/user-edit/edit-nickname",
+    "pages/user-edit/edit-briefintro",
+    "pages/user-edit/cut-avatar",
+    "pages/search-res/search-res",
+    "pages/chat/chat"
+    
+  ],
+  "window": {
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#fff",
+    "navigationBarTitleText": "WeChat",
+    "navigationBarTextStyle": "black"
+  },
+  "tabBar": {
+    "color": "#7A7E83",
+    "selectedColor": "#3cc51f",
+    "borderStyle": "black",
+    "backgroundColor": "#ffffff",
+    "list": [
+      {
+        "pagePath": "pages/tabs/tab1/tab1",
+        "iconPath": "image/icon_component.png",
+        "selectedIconPath": "image/icon_component_HL.png",
+        "text": "首页"
+      },
+      {
+        "pagePath": "pages/tabs/tab2/tab2",
+        "iconPath": "image/tab2.png",
+        "selectedIconPath": "image/tab2-chosen.png",
+        "text": "关注"
+      },
+      {
+        "pagePath": "pages/tabs/tab3/tab3",
+        "iconPath": "image/+.png",
+        "selectedIconPath": "image/+-chosen.png",
+        "text": ""
+      },
+      {
+        "pagePath": "pages/tabs/tab4/tab4",
+        "iconPath": "image/tab4.png",
+        "selectedIconPath": "image/tab4-chosen.png",
+        "text": "消息"
+      },
+      {
+        "pagePath": "pages/tabs/tab5/tab5",
+        "iconPath": "image/tab5.png",
+        "selectedIconPath": "image/tab5-chosen.png",
+        "text": "我"
+      }
+    ]
+  },
+  "sitemapLocation": "sitemap.json"
+}

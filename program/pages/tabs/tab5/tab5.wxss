@@ -1,0 +1,32 @@
+/* pages/tabs/tab5/tab5.wxss */
+.avatarview {
+  display: flex;
+  justify-content: center;
+  padding: 30rpx;
+}
+
+.avatarview image {
+  width: 300rpx;
+  height: 300rpx;
+  border-radius: 100%;
+}
+text.nickname {
+  font-size: 60rpx;
+  font-weight: 550;
+}
+text.username, .detail, .briefintro {
+  font-size: 30rpx;
+  color: gray;
+}
+text.data {
+  font-size: 40rpx;
+}
+view.blank {
+  height: 10rpx;
+}
+view.board-blank {
+  height: 30rpx;
+}
+view.tab {
+  padding: 30rpx 30rpx 0 30rpx;
+}

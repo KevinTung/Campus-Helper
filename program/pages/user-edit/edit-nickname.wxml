@@ -1,0 +1,27 @@
+<!--pages/user-edit/edit-nickname.wxml-->
+<view class="nav-bar">
+  <van-nav-bar
+    title="昵称"
+    left-text="取消"
+    right-text="保存"
+    left-arrow
+    bind:click-left="cancel"
+    bind:click-right="save"
+    safe-area-inset-top="false"
+  />
+</view>
+<view class="inputBox">
+  <van-cell-group>
+      <input 
+        value="{{ nickname }}"
+        placeholder="请输入昵称"
+        bindconfirm="onConfirm"
+        bindinput="onInputChange"
+        bindblur="setFocus"
+        maxlength="10"
+        focus="{{ focused }}"
+        hold-keyboard
+        confirm-hold
+      />
+  </van-cell-group>
+</view>

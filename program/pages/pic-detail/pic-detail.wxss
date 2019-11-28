@@ -1,0 +1,128 @@
+.main{
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+.main-center{
+  width: 100%;
+  margin-left: 30rpx;
+  margin-right: 30rpx;
+}
+.top-row{
+  display: flex;
+  flex-direction: row;
+  align-items:center;
+}
+
+.name-btn-view { 
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+view.name-btn {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+view.name {
+  font-size: 50rpx;
+  font-weight: 500;
+}
+
+button.follow-btn{
+  display: flex;
+  justify-content: center;
+  height: 60rpx;
+  font-size: 30rpx;
+  align-items: center;
+}
+.top-row-right-hor-blank1{
+  height: 5rpx;
+}
+.top-row-right-hor-blank2{
+  height: 30rpx;
+}
+.main-pic{
+  width:100%;
+}
+
+.avatarview {
+  display: flex;
+  justify-content: center;
+  padding: 30rpx;
+  padding-top: 30rpx;
+}
+
+.avatarview image {
+  width: 120rpx;
+  height: 120rpx;
+  border-radius: 100%;
+}
+
+.blank1{
+  height:10rpx;
+}
+view.content {
+  display: flex;
+  flex-direction: column;
+}
+
+.time{
+  color: gray;
+  font-size: 30rpx;
+}
+.blank-name{
+  height:60rpx;
+}
+
+.username{
+  color: gray;
+  font-size: 30rpx;
+}
+.follow-btn-view{
+  display: flex;
+  padding-left: 0rpx;
+}
+
+.picTitle{
+  font-size: 38rpx;
+}
+.blank2{
+  height:40rpx;
+}
+
+
+view.buttons {
+  display: flex;
+  flex-direction: row;
+  margin-left: 14rpx;
+}
+
+view.like-view {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+view.comment-view, .share-view {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  margin-left: 70rpx;
+}
+
+button.my-button {
+  border: none;
+  background-color: #f2f2f2;
+}
+
+input.commentInput {
+  font-size: 30rpx;
+  margin: 25rpx;
+}
+
+page {
+  background-color: #f2f2f2;
+}
+

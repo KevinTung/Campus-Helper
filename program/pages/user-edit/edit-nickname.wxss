@@ -1,0 +1,13 @@
+/* pages/user-edit/edit-nickname.wxss */
+van-cell-group {
+  padding: 20rpx;
+}
+
+input {
+  background-color: white;
+  padding: 20rpx;
+}
+
+page {
+  background-color: #f2f2f2
+}

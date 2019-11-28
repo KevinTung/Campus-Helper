@@ -1,0 +1,79 @@
+<!--pages/user-detail/user-detail.wxml-->
+<view>
+  <van-row>
+    <van-col offset="1">
+      <view class="avatarview">
+        <image class="avatar" src="{{ avatar }}" bindtap="toFurtherinfo"/>
+      </view>
+    </van-col>
+    <view wx:if="{{ displayButton }}">
+      <van-col offset="2">
+        <view class="button1">
+          <van-button type="primary" bindtap="sendMessage">发消息</van-button>
+        </view>
+      </van-col>
+      <van-col offset="1">
+        <view class="button2">
+          <view wx:if="{{ follow }}">
+            <van-button plain type="default" bindtap="onFollowChange">取消关注</van-button>
+          </view>
+          <view wx:else>
+            <van-button icon="plus" plain type="primary" bindtap="onFollowChange">关注</van-button>
+          </view>
+        </view>
+      </van-col>
+    </view>
+  </van-row>
+  <van-row>
+    <van-col offset="2">
+      <text class="nickname" space="nbsp" decode>{{ userInfo.nickname }}&nbsp;</text>
+      <text class="username">@{{ userInfo.username }}</text>
+    </van-col>
+  </van-row>
+  <view class="blank"/>
+  <van-row>
+    <van-col offset="2">
+      <text wx:if="{{ userInfo.gender }}" class="detail" space="nbsp" decode>{{ userInfo.gender }}&nbsp;&nbsp;</text>
+      <text wx:if="{{ userInfo.age }}" class="detail" space="nbsp" decode>{{ userInfo.age }}岁&nbsp;&nbsp;</text>
+      <text class="detail" wx:if="{{ userInfo.zodiac }}">{{ userInfo.zodiac }}</text>
+    </van-col>
+  </van-row>
+  <view class="blank"/>
+  <van-row>
+    <van-col offset="2" span="20">
+      <text class="briefintro">{{ userInfo.briefintro }}</text>
+    </van-col>
+  </van-row>
+  <view class="board-blank"/>
+  <van-row>
+    <van-col offset="2">
+      <text class="data">{{ userInfo.cnt_upvoted }}</text>
+      <text class="detail" space="nbsp" decode>&nbsp;被赞&nbsp;&nbsp;</text>
+      <text class="data">{{ userInfo.cnt_follower }}</text>
+      <text class="detail" space="nbsp" decode>&nbsp;粉丝&nbsp;&nbsp;</text>
+      <text class="data">{{ userInfo.cnt_poster }}</text>
+      <text class="detail" space="nbsp" decode>&nbsp;发布&nbsp;&nbsp;</text>
+      <text class="data">{{ credit }}</text>
+      <text class="detail" space="nbsp" decode>&nbsp;影响力&nbsp;&nbsp;</text>
+    </van-col>
+  </van-row>
+  <view class="board-blank"/>
+  <van-tabs swipeable animated sticky >
+    <!-- <van-tab title="主页">
+      <view class="tab">
+        主页
+      </view>
+    </van-tab> -->
+    <van-tab title="动态">
+      <view class="tab">
+        <WaterFallView id="waterfall">
+        </WaterFallView>
+      </view>
+    </van-tab>
+    <!-- <van-tab title="相册">
+      <view class="tab">
+        相册
+      </view>
+    </van-tab> -->
+  </van-tabs>
+</view>

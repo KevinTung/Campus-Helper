@@ -1,0 +1,58 @@
+/* pages/search-res/search-res.wxss */
+view.stick {
+  position: sticky;
+  top: 0;
+  width: 100%;
+  z-index: 2;
+}
+view.no-res {
+  width: 100%;
+  height: 600rpx;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 30rpx;
+  color: gray;
+}
+
+
+.search-history{
+  background-color: #fff;
+  font-size:30rpx;
+  width: 100%;
+}
+.search-history > view{
+  padding:10rpx;
+  margin-left: 30rpx;
+  border-bottom:1rpx solid #efefef;
+  font-size:30rpx;
+  width: 90%;
+  justify-content: space-between;
+  align-items: center;
+  display: flex;
+}
+.search-history > view:last-child{
+  display: flex;
+  width: 90%;
+  justify-content: center;
+  align-items: center;
+  padding: 20rpx;
+}
+.search-history > text{
+  display: block;
+  background-color: #efefef;
+  color: rgba(0, 0, 0, 0.6);
+  padding: 10rpx 0 10rpx 40rpx;
+}
+.close{
+  color:rgba(191, 191, 191, 0.7);
+  border-radius:50%;
+  line-height:60rpx;
+  text-align:center;
+  height:60rpx;
+  width:60rpx;
+  font-size:26rpx;
+}
+.close::before {
+  content: "\2716";
+}

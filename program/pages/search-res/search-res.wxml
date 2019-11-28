@@ -1,0 +1,26 @@
+<!--pages/search-res/search-res.wxml-->
+<view class="stick">
+  <van-search
+    value="{{value}}"
+    placeholder="请输入搜索关键词"
+    show-action
+    action-text="返回"
+    bind:search="onSearch"
+    bind:cancel="blurSearch"
+    bind:focus="focusSearch"
+  />
+  <view class='result-container' wx:if="{{searching}}">
+    <view class='search-history' wx:if="{{StorageFlag}}">
+      <view class='weui-flex' wx:for="{{searcherStorage}}" wx:key="index" data-id="{{index}}" catchtap='tapSearcherStorage'>
+        <text data-id="{{index}}">{{item}}</text>
+        <span class='close' data-id="{{index}}" catchtap="deteleSearcherStorage"></span>
+      </view>
+      <view wx:if='{{searcherStorage.length != 0}}' catchtap='clearSearchStorage'>清除搜索记录        </view>
+    </view>
+  </view>
+</view>
+<view>
+  <WaterFallView id="waterFallView">
+  </WaterFallView>
+</view>
+<view wx:if="{{noResult}}" class="no-res">什么也没有哦</view>

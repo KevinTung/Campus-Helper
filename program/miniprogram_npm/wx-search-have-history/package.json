@@ -1,0 +1,53 @@
+{
+  "_from": "wx-search-have-history",
+  "_id": "wx-search-have-history@0.0.2",
+  "_inBundle": false,
+  "_integrity": "sha512-c+7SQNQuPRxs+BCZMGY7xWsAROGdDU50uJ+O2FHuQbjI4TVQLIMG4O0NeEY5olnsgPH5NWCHo+cXyDOdXQYUtQ==",
+  "_location": "/wx-search-have-history",
+  "_phantomChildren": {},
+  "_requested": {
+    "type": "tag",
+    "registry": true,
+    "raw": "wx-search-have-history",
+    "name": "wx-search-have-history",
+    "escapedName": "wx-search-have-history",
+    "rawSpec": "",
+    "saveSpec": null,
+    "fetchSpec": "latest"
+  },
+  "_requiredBy": [
+    "#USER",
+    "/"
+  ],
+  "_resolved": "https://registry.npmjs.org/wx-search-have-history/-/wx-search-have-history-0.0.2.tgz",
+  "_shasum": "25060d79e1023963dd417377e4333901c748aa27",
+  "_spec": "wx-search-have-history",
+  "_where": "/Users/kevintung/WeChatProjects/PicSocialPlatform/wx-frontend/miniprogram-1",
+  "author": {
+    "name": "weiwei"
+  },
+  "bugs": {
+    "url": "https://github.com/chenweihuan/searchHaveHistory/issues"
+  },
+  "bundleDependencies": false,
+  "deprecated": false,
+  "description": "Wechat miniprogram search box with search record",
+  "homepage": "https://github.com/chenweihuan/searchHaveHistory#readme",
+  "keywords": [
+    "wx-search",
+    "search-have-history",
+    "wx-search-have-history"
+  ],
+  "license": "ISC",
+  "main": "src/index.js",
+  "miniprogram": "src",
+  "name": "wx-search-have-history",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/chenweihuan/searchHaveHistory.git"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "version": "0.0.2"
+}

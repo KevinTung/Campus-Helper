@@ -1,0 +1,16 @@
+{
+  "usingComponents": {
+    "van-button": "/miniprogram_npm/vant-weapp/button/index",
+    "van-row": "/miniprogram_npm/vant-weapp/row/index",
+    "van-col": "/miniprogram_npm/vant-weapp/col/index",
+    "van-field": "/miniprogram_npm/vant-weapp/field/index",
+    "van-tag": "/miniprogram_npm/vant-weapp/tag/index",
+    "van-checkbox-group": "/miniprogram_npm/vant-weapp/checkbox-group/index",
+    "van-cell-group": "/miniprogram_npm/vant-weapp/cell-group/index",
+    "van-cell": "/miniprogram_npm/vant-weapp/cell/index",
+    "van-nav-bar": "/miniprogram_npm/vant-weapp/nav-bar/index",
+    "van-picker": "/miniprogram_npm/vant-weapp/picker/index",
+    "van-popup": "/miniprogram_npm/vant-weapp/popup/index",
+    "mp-uploader": "/components/uploader/uploader"
+  }
+}
