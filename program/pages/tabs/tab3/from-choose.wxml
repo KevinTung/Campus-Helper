@@ -15,7 +15,6 @@
   items="{{ items }}"
   main-active-index="{{ mainActiveIndex }}"
   active-id="{{ activeId }}"
-  max="{{ max }}"
   bind:click-nav="onClickNav"
   bind:click-item="onClickItem"
 />
@@ -38,16 +37,6 @@
 <view class="blank"/>
 <view>
   <van-row>
-    <van-col offset="1">
-      <van-tag
-        
-        round
-        type="danger"
-        bindtap="onCustom"
-        size="medium"
-      >自定义
-      </van-tag>
-    </van-col>
     <van-col wx:for="{{ custom_tags }}" wx:key="index" offset="1">
       <van-tag
         
@@ -62,19 +51,3 @@
   </van-row>
 </view>
 
-<van-popup
-  position="bottom"
-  class="custom-tag-input"
-  show="{{ showCustom }}"
-  bind:click-overlay="clickOverlay"
->
-  <view class="custom-input">
-    <input
-      value="{{inputValue}}"
-      class="tags-input"
-      placeholder="添加一个自定义标签"
-      bindconfirm="onCustomConfirm"
-      focus="{{ showInput }}"
-    />
-  </view>
-</van-popup>

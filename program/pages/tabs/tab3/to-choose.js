@@ -120,16 +120,7 @@ Page({
   },
 
   onClickItem: function ({ detail = {} }) {
-    const { activeId } = this.data
-
-    const index = activeId.indexOf(detail.id)
-    if (index > -1) {
-      activeId.splice(index, 1)
-      this.deleteTags(index)
-    } else {
-      activeId.push(detail.id)
-      this.addTags(detail.text)
-    }
+    const activeId = this.data.activeId === detail.id ? null : detail.id;
     this.setData({ activeId })
     console.log(detail)
   },

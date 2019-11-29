@@ -117,11 +117,12 @@ Page({
     this.setData({
       mainActiveIndex: detail.index || 0
     })
+    console.log(detail);
   },
 
   onClickItem: function ({ detail = {} }) {
     const { activeId } = this.data
-
+    
     const index = activeId.indexOf(detail.id)
     if (index > -1) {
       activeId.splice(index, 1)

@@ -15,7 +15,6 @@
   items="{{ items }}"
   main-active-index="{{ mainActiveIndex }}"
   active-id="{{ activeId }}"
-  max="{{ max }}"
   bind:click-nav="onClickNav"
   bind:click-item="onClickItem"
 />
@@ -39,21 +38,11 @@
 <view>
   <van-row>
     <van-col offset="1">
-      <van-tag
-        
-        round
-        type="danger"
-        bindtap="onCustom"
-        size="medium"
-      >自定义
-      </van-tag>
     </van-col>
     <van-col wx:for="{{ custom_tags }}" wx:key="index" offset="1">
       <van-tag
-        
         round
         id="{{ index }}"
-        
         size="medium"
         bindtap="deleteCustomTag"
       >{{ item }}
