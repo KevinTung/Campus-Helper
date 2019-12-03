@@ -37,13 +37,29 @@ Page({
         id: 6,
         disabled: false
       }]
-    }],
+      }, {
+        text: '操场',
+        disabled: false,
+        children: [{
+          text: '紫操',
+          id: 4,
+          disabled: false
+        }, {
+          text: '西操',
+          id: 5,
+          disabled: false
+        }, {
+          text: '东操',
+          id: 6,
+          disabled: false
+        }]
+      }],
 
     mainActiveIndex: 0,
-    activeId: [],
-    max: 1,
+    activeId: null,
+    
     tags: [],
-    custom_tags: [],
+    custom_tags:"",
     inputValue: ""
   },
 
@@ -56,23 +72,17 @@ Page({
 
   onCustomConfirm: function (e) {
     console.log(e.detail)
-    var newtag = e.detail.value
-    var list = this.data.custom_tags
-    list.push(newtag)
     console.log(list)
     this.setData ({
-      custom_tags: list,
+      custom_tags: e.detail.value,
       inputValue: "",
       showCustom: false
     })
   },
 
   deleteCustomTag: function (e) {
-    console.log(e.detail)
-    var list = this.data.custom_tags
-    list.splice(e.detail.id, 1)
     this.setData ({
-      custom_tags: list
+      custom_tags: ""
     })
   },
 
@@ -85,7 +95,8 @@ Page({
   confirm: function () {
     var pages = getCurrentPages()
     var prevPage = pages[pages.length - 2]
-    var tags = this.data.tags.concat(this.data.custom_tags)
+    var tags = this.data.custom_tags
+    console.log("LLLL"+tags)
     // 此页面只能由tab3打开，prevPage必定为tab3，无需多加验证
     prevPage.setData({
       'pic.to_tag': tags
@@ -115,14 +126,19 @@ Page({
 
   onClickNav: function ({ detail = {} }) {
     this.setData({
-      mainActiveIndex: detail.index || 0
+      mainActiveIndex: detail.index || 0,
+      custom_tags: detail.text+":" 
     })
+    console.log(detail);
+   
   },
 
   onClickItem: function ({ detail = {} }) {
+    console.log(detail);
     const activeId = this.data.activeId === detail.id ? null : detail.id;
-    this.setData({ activeId })
-    console.log(detail)
+    this.setData({ activeId, 
+    custom_tags:detail.text
+     });
   },
 
   onChoose: function (e) {

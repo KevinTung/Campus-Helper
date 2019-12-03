@@ -151,3 +151,13 @@ height: 40rpx;
   margin-top:15rpx;
   font-size:22rpx;
 }
+.from{
+  color: gray;
+  font-size: 20rpx;
+}
+
+.to{
+  color:gray;
+  font-size: 20rpx;
+  padding-left: 20rpx;
+}

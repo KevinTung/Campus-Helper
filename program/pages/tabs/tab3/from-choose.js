@@ -137,7 +137,7 @@ Page({
     console.log(detail);
     const activeId = this.data.activeId === detail.id ? null : detail.id;
     this.setData({ activeId, 
-    custom_tags:this.data.custom_tags+detail.text
+    custom_tags:detail.text
      });
   },
 

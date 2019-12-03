@@ -1,4 +1,5 @@
 <!--pages/tabs/tab4/tab4.wxml-->
+<!-->
 <view class="blank" />
 <view class="blank" />
 <view class="button-group">
@@ -20,7 +21,7 @@
       >我收到的点赞</van-button>
     </van-col>
   </van-row>
-</view>
+</view>-->
 <view class="blank" />
 <view>
   <!--
@@ -47,25 +48,32 @@
         src="{{ item.avatar }}"
       />
     </van-col>
-    <van-col offset="1" span="15">
+    <van-col offset="1" span="14">
       <van-row>
         <text class="nickname">{{ item.nickname }}</text>
       </van-row>
       <view class="blank" />
       <van-row>
-        <text class="comment">{{ item.message.content }}</text>
+        <text class="from">从: </text> 
+        <van-tag
+          type="danger"
+          round
+          size="medium"
+        >{{ temp_from_tag }}
+        </van-tag>
+
+        <text class="to" >到: </text> 
+        <van-tag
+          type="danger"
+          round
+          size="medium"
+        >{{ temp_to_tag }}
+        </van-tag>
       </van-row>
-      
     </van-col>
     <van-col>
       <van-row>
         <text class="time">{{ item.message.time }}</text>
-      </van-row>
-      <van-row>
-        <view wx:if="{{item.unread > 0}}"
-        class="unread"
-          mode='aspectFit'
-        >{{item.unread}}</view>
       </van-row>
     </van-col>
   </van-row>

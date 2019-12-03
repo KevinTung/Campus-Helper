@@ -22,7 +22,9 @@ Page({
     }, {
       username: 'c',
       message: '!',
-    }]
+    }],
+    temp_from_tag:"紫荆2",
+    temp_to_tag:"六教"
   },
 
   displayComments: function () {

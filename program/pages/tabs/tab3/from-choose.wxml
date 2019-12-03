@@ -36,18 +36,6 @@
 </view>
 <view class="blank"/>
 <view>
-  <van-row>
-    <van-col wx:for="{{ custom_tags }}" wx:key="index" offset="1">
-      <van-tag
-        
-        round
-        id="{{ index }}"
-        
-        size="medium"
-        bindtap="deleteCustomTag"
-      >{{ item }}
-      </van-tag>
-    </van-col>
-  </van-row>
+
 </view>
 
