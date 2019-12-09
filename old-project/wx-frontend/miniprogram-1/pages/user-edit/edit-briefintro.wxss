@@ -1,0 +1,15 @@
+/* pages/user-edit/edit-briefintro.wxss */
+van-cell-group {
+  padding: 20rpx;
+}
+
+textarea {
+  background-color: white;
+  padding: 20rpx;
+  height: 150rpx;
+  width: 100%
+}
+
+page {
+  background-color: #f2f2f2
+}

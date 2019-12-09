@@ -1,0 +1,24 @@
+<!--pages/user-edit/edit-briefintro.wxml-->
+<view class="nav-bar">
+  <van-nav-bar
+    title="个性签名"
+    left-text="取消"
+    right-text="保存"
+    left-arrow
+    bind:click-left="cancel"
+    bind:click-right="save"
+    safe-area-inset-top="false"
+  />
+</view>
+<view class="inputBox">
+  <van-cell-group>
+      <textarea
+        value="{{ briefintro }}"
+        bindinput="onInputChange"
+        bindconfirm="onConfirm"
+        maxlength="60"
+        focus="{{ focused }}"
+        hold-keyboard
+      />
+  </van-cell-group>
+</view>

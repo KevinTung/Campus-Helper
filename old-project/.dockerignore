@@ -1,0 +1,7 @@
+.git
+.gitlab
+node_modules
+coverage
+.eslintrc.json
+.gitlab-ci.yml
+sonar-project.properties

@@ -1,0 +1,14 @@
+{
+  "usingComponents": {
+    "WaterFallView": "/components/WaterFallView-single/WaterFallView-single",
+    "van-button": "/miniprogram_npm/vant-weapp/button/index",
+    "van-row": "/miniprogram_npm/vant-weapp/row/index",
+    "van-col": "/miniprogram_npm/vant-weapp/col/index",
+    "van-icon": "/miniprogram_npm/vant-weapp/icon/index",
+    "van-cell": "/miniprogram_npm/vant-weapp/cell/index",
+    "van-cell-group": "/miniprogram_npm/vant-weapp/cell-group/index",
+    "van-tabs": "/miniprogram_npm/vant-weapp/tabs/index",
+    "van-tab": "/miniprogram_npm/vant-weapp/tab/index"
+  },
+  "navigationBarTitleText": "用户详情"
+}

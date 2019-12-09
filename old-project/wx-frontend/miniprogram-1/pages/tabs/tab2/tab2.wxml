@@ -1,0 +1,24 @@
+<!--pages/tabs/tab2/tab2.wxml-->
+<WaterFallView-follow
+  id="waterFallView"
+  bind:upvote="onUpvote"
+  bind:comment="onComment"
+>
+</WaterFallView-follow>
+
+<van-popup
+  position="bottom"
+  class="input"
+  show="{{showInput}}"
+  bind:click-overlay="clickOverlay"
+>
+  <view class="input">
+    <input
+      class="commentInput"
+      value="{{inputValue}}"
+      placeholder="发表评论..."
+      bindconfirm="onConfirm"
+      focus="{{showInput}}"
+    />
+  </view>
+</van-popup>

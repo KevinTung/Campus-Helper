@@ -1,0 +1,10 @@
+{
+  "usingComponents": {
+    "WaterFallView-follow": "/components/WaterFallView-follow/WaterFallView-follow",
+    "van-field": "/miniprogram_npm/vant-weapp/field/index",
+    "van-cell-group": "/miniprogram_npm/vant-weapp/cell-group/index",
+    "van-col": "/miniprogram_npm/vant-weapp/col/index",
+    "van-popup": "/miniprogram_npm/vant-weapp/popup/index"
+  },
+  "navigationBarTitleText": "关注"
+}

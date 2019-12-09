@@ -1,0 +1,5 @@
+/* pages/tabs/tab2/tab2.wxss */
+input.commentInput {
+  font-size: 30rpx;
+  margin: 25rpx;
+}

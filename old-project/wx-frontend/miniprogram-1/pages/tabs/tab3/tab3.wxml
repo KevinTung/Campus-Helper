@@ -1,0 +1,91 @@
+<!--pages/tabs/tab3/tab3.wxml-->
+<view class="nav-bar">
+  <van-nav-bar
+    title="动态"
+    left-text="取消"
+    right-text="发布"
+    bind:click-left="cancel"
+    bind:click-right="publish"
+  />
+
+</view>
+<view class="poster">
+  <view class="blank" />
+  <van-row>
+    <van-col offset="1">
+      <image 
+        class="avatar"
+        mode="aspectFit"
+        style="width:90rpx;height:90rpx;border-radius:100%;"
+        src="{{ avatar }}"
+      />
+    </van-col>
+    <van-col offset="1">
+      <text class="nickname">{{ nickname }}</text>
+    </van-col>
+  </van-row>
+  <view class="blank" />
+  <van-row>
+    <van-col offset="1">
+      <textarea
+        value="{{ pic.intro }}"
+        bindinput="onPicIntroChange"
+        placeholder="分享新鲜事..."
+      />
+    </van-col>
+  </van-row>
+  <view class="blank" />
+  <van-row>
+    <van-col offset="1">
+      <mp-uploader 
+        bindselect="choosePic" 
+        bindsuccess="uploadSuccess" 
+        select="{{selectFile}}" 
+        bindfail="uploadError" 
+        files="{{ pic.urls }}" 
+        max-count="1" 
+        title="" 
+      />
+    </van-col>
+  </van-row>
+  <view class="blank"/>
+  <van-row>
+    <van-col wx:for="{{ pic.tags }}"wx:key="index" offset="1">
+      <van-tag
+        
+        round
+        id="{{ index }}"
+        
+        size="medium"
+      >{{ item }}
+      </van-tag>
+    </van-col>
+  </van-row>
+  <view class="blank"/>
+  <van-row>
+    <van-col offset="1">
+      <van-button round plain icon="label-o" bindtap="displayTagCheckbox">添加标签</van-button>
+    </van-col>
+    <van-col offset="6">
+      <van-button 
+        round 
+        plain 
+        icon="friends-o" 
+        bindtap="displayPrivacyPicker"
+      >{{ privacy[pic.privacyLevel] }}
+      </van-button>
+    </van-col>
+  </van-row>
+  <view class="blank" />
+</view>
+
+<van-popup position="bottom" class="privacySelector" show="{{ showPrivacyPicker }}">
+  <van-picker
+    title="隐私"
+    show-toolbar
+    columns="{{ privacy }}"
+    default-index="{{ 0 }}"
+    bind:cancel="onCancelPrivacy"
+    bind:confirm="onConfirmPrivacy"
+  />
+</van-popup>

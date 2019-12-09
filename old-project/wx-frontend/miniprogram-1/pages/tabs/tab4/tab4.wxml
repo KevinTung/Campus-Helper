@@ -1,0 +1,77 @@
+<!--pages/tabs/tab4/tab4.wxml-->
+<view class="blank" />
+<view class="blank" />
+<view class="button-group">
+  <van-row>
+    <van-col offset="2" span="10">
+      <van-button 
+        round
+        color="rgb(29,189,238)" 
+        icon="comment" 
+        bindtap="displayComments"
+      >我收到的评论</van-button>
+    </van-col>
+    <van-col offset="1">
+      <van-button 
+       round
+        color="red" 
+        icon="good-job" 
+        bindtap="displayLikes"
+      >我收到的点赞</van-button>
+    </van-col>
+  </van-row>
+</view>
+<view class="blank" />
+<view>
+  <!--
+  <van-cell-group>
+    <van-cell wx:for="{{msglist}}" wx:key="unique" title="{{item.username}}" 
+    label="{{item.message}}" icon="{{item.avatar}}" /> 
+  </van-cell-group>
+  -->
+</view>
+<view class="blank" />
+
+
+
+
+<view class="chatblock" wx:for="{{ chatList }}" wx:key="index">
+<navigator hover-class="chat-hover" url="/pages/chat/chat?chatTo={{ item.chatTo }}">
+  <view class="top-margin"/>
+  <view class="blank" />
+  <van-row>
+    <van-col offset="1">
+      <image
+        mode='aspectFit'
+        style='width:90rpx;height:90rpx;border-radius:100%;'
+        src="{{ item.avatar }}"
+      />
+    </van-col>
+    <van-col offset="1" span="15">
+      <van-row>
+        <text class="nickname">{{ item.nickname }}</text>
+      </van-row>
+      <view class="blank" />
+      <van-row>
+        <text class="comment">{{ item.message.content }}</text>
+      </van-row>
+      
+    </van-col>
+    <van-col>
+      <van-row>
+        <text class="time">{{ item.message.time }}</text>
+      </van-row>
+      <van-row>
+        <view wx:if="{{item.unread > 0}}"
+        class="unread"
+          mode='aspectFit'
+        >{{item.unread}}</view>
+      </van-row>
+    </van-col>
+  </van-row>
+  <view class="blank" />
+  </navigator>
+</view>
+
+
+<view class="top-margin"/>

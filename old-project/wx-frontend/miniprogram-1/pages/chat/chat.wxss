@@ -1,0 +1,127 @@
+/* pages/chat/chat.wxss */
+.blank {
+  height: 15rpx;
+}
+
+
+
+
+.chatinput-wrapper {
+  width: 100%;
+  background-color: #fff;
+  border: 2rpx solid #ccc;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+}
+.chatinput-content {
+  width: 100%;
+  height: 100rpx;
+}
+.chatinput-img{
+  width: 60rpx;
+  height: 60rpx;
+  border-radius: 100%;
+  margin: 20rpx 20rpx;
+  display: inline-block;
+}
+.chatinput-img.emoji{
+  margin-right: 0;
+}
+.chatinput-img:active {
+  opacity: .6;
+}
+ .chatinput-input {
+  width: 566rpx;
+  min-height: 72rpx;
+  border-radius: 12rpx;
+  border: 1px solid #ccc;
+  margin-top: 15rpx;
+  margin-left: 20rpx;
+  display: inline-block;
+  vertical-align:top;
+  box-sizing:border-box;
+  padding-left: 20rpx;
+  font-size: 30rpx;
+}
+.chatinput-voice-mask {
+  width: 466rpx;
+  height: 76rpx;
+  line-height: 76rpx;
+  display: inline-block;
+  border-radius: 12rpx;
+  border: 1px solid #ccc;
+  margin-top: 12rpx;
+  vertical-align:top;
+  box-sizing:border-box;
+  /* padding-left: 20rpx; */
+  font-size: 30rpx;
+  text-align: center;
+  color: #333336;
+  background-color: #fff;
+  letter-spacing: 4rpx;
+}
+.chatinput-voice-mask-hover {
+  background-color: #cecece;
+  color: #333336;
+}
+/*subcontent wrapper  */
+.chatinput-subcontent {
+ width: 100%;
+ height: 470rpx;
+ background-color: #999;
+}
+.fr {
+  float: right;
+  height: 72rpx;
+  margin-top: 15rpx;
+  margin-right: 20rpx;
+  font-size: 30rpx;
+  color: white;
+  background-color:#1aad19;
+}
+.record-wrapper {
+  width: 100%;
+  padding-bottom: 100rpx;
+  padding-top:80rpx;
+}
+.record-chatting-item {
+  width: 100%;
+  padding: 20rpx 20rpx;
+  box-sizing: border-box;
+}
+.record-item-time-wrapper {
+  display:flex;
+  flex-direction:row;
+  justify-content:center;
+}
+.record-item-time {
+  padding:4rpx 10rpx;
+  background: #D6D6D6;
+  border-radius: 8rpx;
+  font-size: 24rpx;
+  color: #fff;
+}
+.record-chatting-item-img {
+  width: 80rpx;
+  height: 80rpx;
+  border-radius: 100%;
+  display: inline-block;
+}
+
+.record-chatting-item-text {
+  max-width: 70%;
+  border-radius: 8rpx;
+  background-color: #3387FF;
+  padding: 16rpx;
+  box-sizing:border-box;
+  word-wrap:break-word;
+  overflow: hidden;
+  font-size: 32rpx;
+  line-height: 48rpx;
+}
+.record-chatting-item-text.nobg {
+  background: transparent;
+  margin-left: 20rpx;
+  margin-right: 20rpx;
+}

@@ -1,0 +1,122 @@
+<view class="main" bindtouchstart="onTouchStart" bindtouchend="onTouchEnd"> 
+  <!-- <view class="main-blank"></view> -->
+  <view class="main-center">
+    <!-- <view class="blank"></view> -->
+    <view class="top-row">
+      <view class="avatarview">
+        <image class="avatar"  src="{{ headUrl }}" bindtap="toUserPage"/>
+      </view>
+      <view class="name-btn-view">
+        <view class="name-btn">
+          <view class="name">
+            {{userInfo.nickname}}
+          </view>
+          <!-- <view class="name-btn-blank"></view> -->
+          <view class="follow-btn" wx:if="{{showButtons}}">
+            <button
+              class="follow-btn"
+              bindtap="followTapped"
+              plain
+              type="default"
+              wx:if="{{follow}}"
+            >
+            取消关注
+            </button>
+            <button
+              class="follow-btn"
+              bindtap="followTapped"
+              type="primary"
+              wx:else
+            >
+            关注
+            </button>
+          </view>
+        </view>
+        <!-- <view class="top-row-right-hor-blank1"></view> -->
+        <view class="username">@{{userInfo.username}}</view>
+        <!-- <view class="top-row-right-hor-blank2"></view> -->
+        <view class="follow-btn-view">   
+        </view>
+      </view>
+    </view>
+    <view class="blank1" />
+      <image class="main-pic" mode="widthFix" src="{{picUrl}}" bindtap="preview" />
+    <view class="blank1" />
+    <view class="buttons">
+      <view class="like-view">
+        <button
+          class="my-button"
+          hover-class="none"
+          plain
+          bindtap="upvote"
+        >
+          <van-icon name="good-job" color="gold" wx:if="{{upvoted}}" />
+          <van-icon name="good-job-o" wx:else />
+        </button>
+        <text class="likes" space="nbsp" decode>{{ cnt_upvote }}</text>
+      </view>
+      <view class="comment-view">
+        <button
+          class="my-button"
+          hover-class="none"
+          plain
+          bindtap="comment"
+        >
+          <van-icon name="comment-o"/>
+        </button>
+        <text class="comments" space="nbsp" decode>{{ cnt_comment }}</text>
+      </view>
+      <view class="share-view">
+        <button
+          class="my-button"
+          hover-class="none"
+          plain
+          open-type="share"
+        >
+          <van-icon name="share"/>
+        </button>
+      </view>
+    </view>
+    <view class="content">
+      <text class="time">{{time}}</text>
+      <view class="blank1" />
+      <text class="picTitle">{{picTitle}}</text>
+      <view class="tags" wx:if="{{ tags }}">
+        <view class="blank1" />
+        <van-row>
+          <van-col wx:for="{{ tags }}" wx:key="index">
+            <van-tag
+              
+              round
+              id="{{ index }}"
+              
+              size="medium"
+              style="margin-right: 20rpx;"
+            >{{ item }}
+            </van-tag>
+          </van-col>
+        </van-row>
+      </view>
+    </view>
+    <view class="blank2"></view>
+    <comment id="comment" bind:reply="reply"></comment>
+  </view>
+  <!-- <view class="main-blank"></view> -->
+</view>
+
+<van-popup
+  position="bottom"
+  class="input"
+  show="{{showInput}}"
+  bind:click-overlay="clickOverlay"
+>
+  <view class="input">
+    <input
+      class="commentInput"
+      value="{{inputValue}}"
+      placeholder="发表评论..."
+      bindconfirm="onConfirm"
+      focus="{{showInput}}"
+    />
+  </view>
+</van-popup>

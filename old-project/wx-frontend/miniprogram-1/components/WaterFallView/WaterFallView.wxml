@@ -1,0 +1,50 @@
+<!--Component/WaterFallView.wxml-->
+<view class="fall-container">
+  <view class="fall-left">
+    <block wx:for="{{leftList}}" wx:key="{{item.id}}">
+      <template is='goodsCard' data="{{data:item}}" />
+    </block>
+  </view>
+  <view class="fall-right">
+    <block wx:for="{{rightList}}" wx:key="{{item.id}}">
+      <template is='goodsCard' data="{{data:item}}" />
+    </block>
+  </view>
+</view>
+
+<template name="goodsCard">
+  <view class='card-img' id="{{data.pid}}" bindtap="toPicDetail">
+    <image  
+    mode='aspectFill' 
+    style='width:{{data.itemWidth}}px;height:{{data.itemHeight}}px;'
+    src='{{data.img}}'
+    >
+    </image>
+    <van-row>
+      <van-col offset="1">
+        <image
+        mode='aspectFit'
+        style='width:90rpx;height:90rpx;border-radius:100%;'
+        src="{{data.avatar}}"
+        />
+      </van-col>
+      <van-col>
+        <van-row>
+          <text class="nickname" space="nbsp" decode>&nbsp;{{data.nickname}}&nbsp;&nbsp;</text>
+        </van-row>
+        <view class="blank"/>
+        <van-row>
+          <van-col>
+            <van-icon name="good-job" color="gold" wx:if="{{ data.hasUpvoted }}" />
+            <van-icon name="good-job-o" wx:else />
+            <text class="likes" space="nbsp" decode>&nbsp;{{ data.cnt_upvote }}&nbsp;&nbsp;</text>
+          </van-col>
+          <van-col>
+            <van-icon name="comment-o"/>
+            <text class="comments" space="nbsp" decode>&nbsp;{{ data.cnt_comment }}&nbsp;&nbsp;</text>
+          </van-col>
+        </van-row>
+      </van-col>
+    </van-row>
+  </view>
+</template>

@@ -1,0 +1,7 @@
+{
+  "usingComponents": {
+    "van-cell-group": "/miniprogram_npm/vant-weapp/cell-group/index",
+    "van-nav-bar": "/miniprogram_npm/vant-weapp/nav-bar/index"
+  },
+  "navigationBarTitleText": "昵称"
+}

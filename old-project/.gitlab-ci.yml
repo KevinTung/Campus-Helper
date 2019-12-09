@@ -1,0 +1,67 @@
+image: registry.secoder.net/tool/deployer
+
+stages:
+  - test
+  - build
+  - deploy
+
+build:
+  stage: build
+  script:
+    - export BUILD_IMAGE_NAME=$CI_REGISTRY_IMAGE
+    - export BUILD_IMAGE_TAG=latest
+    - export BUILD_IMAGE_USERNAME=$CI_REGISTRY_USER
+    - export BUILD_IMAGE_PASSWORD=$CI_REGISTRY_PASSWORD 
+    - deployer build
+    - deployer dyno replace $CI_PROJECT_NAME "$CI_REGISTRY_IMAGE:latest" "$REGISTRY_USER" "$REGISTRY_PWD"
+  only:
+    - master
+    - dev
+
+.test:
+  image: node:10.16.3
+  stage: test
+  
+  before_script:
+    - npm config set registry https://registry.npm.taobao.org
+    - npm install
+
+style-test:
+  extends: .test
+  script: npm run lint
+
+unit-test:
+  extends: .test
+
+  services:
+    - name: mysql:8.0
+      alias: mysql-server
+      command: ["--default-authentication-plugin=mysql_native_password"]
+    - name: lkmcfj/singlenode-elasticsearch:ik
+      alias: elastic-server
+
+  variables:
+    MYSQL_ROOT_PASSWORD: "123456"
+  
+  script:
+    - sleep 30s # wait for service to be ready
+    - npm run test:backend
+  
+  after_script:
+    - SUFFIX=$RANDOM
+    - curl "http://10.0.0.11/sonar-scanner.tar.gz" -s -o "/tmp/sonar-$SUFFIX.tar.gz"
+    - tar -xf "/tmp/sonar-$SUFFIX.tar.gz"  -C /opt
+    - /opt/sonar-scanner/bin/sonar-scanner
+
+deploy:
+  image: node:10.16.3
+  stage: deploy
+  
+  script:
+    - echo "$SSH_PRIVATE_KEY" > deploy.key
+    - chmod 600 deploy.key
+    - ssh -i deploy.key -o "StrictHostKeyChecking no" -p $SERVER_SSH_PORT $SERVER_USER@$SERVER_ADDR "bash ~/tools/deploy.sh"
+  
+  only:
+    - master
+    - dev
