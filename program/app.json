@@ -1,27 +1,13 @@
 {
   "pages": [
-
-    "pages/login/login",
-    "pages/register/register",
     "pages/tabs/tab1/tab1",
-    "pages/pic-detail/pic-detail",
-    "pages/user-detail/user-detail",
-    "pages/user-detail/user-furtherinfo",
-    "pages/tabs/tab2/tab2",
-        "pages/tabs/tab3/tab3",
-    "pages/tabs/tab3/tag-choose",
-    "pages/tabs/tab4/tab4",
-    "pages/tabs/tab4/my-comment",
-    "pages/tabs/tab4/like",
-    "pages/tabs/tab5/tab5",
-    "pages/user-edit/edit",
-    "pages/user-edit/edit-pwd",
-    "pages/user-edit/edit-nickname",
-    "pages/user-edit/edit-briefintro",
-    "pages/user-edit/cut-avatar",
-    "pages/search-res/search-res",
-    "pages/chat/chat"
+    "pages/index/index",
+    "pages/logs/logs",
     
+    "pages/tabs/tab2/tab2",
+    "pages/tabs/tab3/tab3",
+    "pages/tabs/tab4/tab4",
+    "pages/tabs/tab5/tab5"
   ],
   "window": {
     "backgroundTextStyle": "light",
@@ -67,5 +53,6 @@
       }
     ]
   },
+  "style": "v2",
   "sitemapLocation": "sitemap.json"
 }

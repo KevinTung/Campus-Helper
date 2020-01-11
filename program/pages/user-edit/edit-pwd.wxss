@@ -1,9 +1,0 @@
-/* pages/user-edit/pwd-edit.wxss */
-.inputs {
-  padding: 20rpx;
-  display: flex;
-}
-
-van-cell-group {
-  width: 100%;
-}
