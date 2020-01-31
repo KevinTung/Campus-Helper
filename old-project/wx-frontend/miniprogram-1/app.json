@@ -1,9 +1,9 @@
 {
   "pages": [
-    
+    "pages/tabs/tab1/tab1",
     "pages/login/login",
     "pages/register/register",
-    "pages/tabs/tab1/tab1",
+    
     "pages/pic-detail/pic-detail",
     "pages/user-detail/user-detail",
     "pages/user-detail/user-furtherinfo",

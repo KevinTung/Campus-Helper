@@ -1,13 +1,12 @@
 {
   "pages": [
-    "pages/tabs/tab1/tab1",
-    "pages/index/index",
-    "pages/logs/logs",
     
+    "pages/tabs/tab1/tab1",
     "pages/tabs/tab2/tab2",
     "pages/tabs/tab3/tab3",
     "pages/tabs/tab4/tab4",
-    "pages/tabs/tab5/tab5"
+    "pages/tabs/tab5/tab5",
+    "index/index"
   ],
   "window": {
     "backgroundTextStyle": "light",
