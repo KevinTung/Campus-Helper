@@ -8,8 +8,7 @@ var avatarWrapper = require('../../tools/avatarwrap.js')
 Component({
   properties: {},
   data: {
-    leftList: [], // 左侧集合
-    rightList: [], // 右侧集合
+    list: [{ 'pid': 1, 'test': 100 }, { 'pid': 2, 'test': "200" }],
     pids: []
   },
 

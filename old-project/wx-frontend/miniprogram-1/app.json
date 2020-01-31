@@ -3,7 +3,6 @@
     "pages/tabs/tab1/tab1",
     "pages/login/login",
     "pages/register/register",
-    
     "pages/pic-detail/pic-detail",
     "pages/user-detail/user-detail",
     "pages/user-detail/user-furtherinfo",

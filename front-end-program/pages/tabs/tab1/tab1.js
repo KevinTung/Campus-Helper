@@ -52,6 +52,7 @@ Page({
    */
   onShow: function () {
     var that = this
+    /*
     wx.request({
       url: getApp().globalData.server + '/frontpage',
       method: "POST",
@@ -64,6 +65,8 @@ Page({
         that.receiveImgList(res.data.list)
       }
     })
+    */
+    
   },
 
   /**

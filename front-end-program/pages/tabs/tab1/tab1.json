@@ -1,7 +1,6 @@
 {
   "usingComponents": {
-    "WaterFallView": "/components/WaterFallView/WaterFallView",
-    "van-search": "/miniprogram_npm/vant-weapp/search/index"
+    "WaterFallView": "/components/WaterFallView/WaterFallView"
   },
   "navigationBarTitleText": "首页"
 }

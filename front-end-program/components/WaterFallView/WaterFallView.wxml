@@ -1,17 +1,23 @@
 <!--Component/WaterFallView.wxml-->
 <view class="fall-container">
-  <view class="fall-left">
-    <block wx:for="{{leftList}}" wx:key="{{item.id}}">
-      <template is='goodsCard' data="{{data:item}}" />
+    <block wx:for="{{list}}" wx:key="{{item.id}}">
+      <template is='tasksCard' data="{{data:item}}" />
+      
     </block>
-  </view>
-  <view class="fall-right">
-    <block wx:for="{{rightList}}" wx:key="{{item.id}}">
-      <template is='goodsCard' data="{{data:item}}" />
-    </block>
-  </view>
 </view>
 
+
+<!-- 
+data即第4行傳入的data:item; 
+CardDetail即任務詳情页;
+-->
+<template name ='tasksCard'>
+   <view class='task-img' id="{{data.pid}}" bindtap="toTaskDetail">
+    <text>{{data.test}}</text>
+  </view>
+</template>
+
+<!--以下是渲染圖片邏輯
 <template name="goodsCard">
   <view class='card-img' id="{{data.pid}}" bindtap="toPicDetail">
     <image  
@@ -48,3 +54,5 @@
     </van-row>
   </view>
 </template>
+-->
+

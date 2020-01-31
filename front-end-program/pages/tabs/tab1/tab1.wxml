@@ -1,4 +1,6 @@
 <!--pages/tabs/tab1/tab1.wxml-->
+
+<!--以下為搜索模塊
 <view class="stick" wx:if="{{noHide}}">
   <van-search
     value="{{value}}"
@@ -18,8 +20,11 @@
     </view>
   </view>
 </view>
+-->
+
 <view bindtouchstart="onTouchStart" bindtouchmove="onTouchMove">
   <WaterFallView id="waterFallView">
   </WaterFallView>
 </view>
+
 <view wx:if="{{noResult}}" class="no-res">什么也没有哦</view>
