@@ -1,9 +1,0 @@
-/* pages/tabs/tab3/tag-choose.wxss */
-.blank {
-  height: 15rpx;
-}
-
-input.tags-input {
-  font-size: 30rpx;
-  margin: 25rpx;
-}
