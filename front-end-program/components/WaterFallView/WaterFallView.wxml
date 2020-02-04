@@ -1,9 +1,20 @@
 <!--Component/WaterFallView.wxml-->
-<view class="fall-container">
-    <block wx:for="{{list}}" wx:key="{{item.id}}">
-      <template is='tasksCard' data="{{data:item}}" />
-      
-    </block>
+<view>
+
+  <!-- <van-row>
+      <van-col span="8">
+        <text class='myfont'>取一个快递</text>
+      </van-col>
+      <van-col span="8">你</van-col>
+      <van-col span="8">2000</van-col>
+    </van-row> -->
+
+
+  <block wx:for="{{list}}">
+    <template is='tasksCard' data="{{data:item}}" />
+
+  </block>
+
 </view>
 
 
@@ -11,9 +22,15 @@
 data即第4行傳入的data:item; 
 CardDetail即任務詳情页;
 -->
-<template name ='tasksCard'>
-   <view class='task-img' id="{{data.pid}}" bindtap="toTaskDetail">
-    <text>{{data.test}}</text>
+<template name='tasksCard'>
+  <view class='task-img' bindtap="toTaskDetail">
+    <van-cell-group>
+      <van-cell title="{{data.task}}" value="{{data.score}}" />
+      <van-cell title="{{data.start}}" value="{{data.end}}" />
+      <van-cell title="{{data.username}}" value="{{data.money}}" />
+
+    </van-cell-group>
+    <text>\n</text>
   </view>
 </template>
 
@@ -55,4 +72,3 @@ CardDetail即任務詳情页;
   </view>
 </template>
 -->
-

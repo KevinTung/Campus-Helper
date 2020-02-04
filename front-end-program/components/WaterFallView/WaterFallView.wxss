@@ -1,4 +1,8 @@
 /* Component/WaterFallView.wxss */
+.myfont{
+  font-size: 10px
+}
+
 .fall-container {
   justify-content: center;
   width: 100%;

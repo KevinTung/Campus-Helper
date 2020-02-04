@@ -25,6 +25,8 @@
 <view bindtouchstart="onTouchStart" bindtouchmove="onTouchMove">
   <WaterFallView id="waterFallView">
   </WaterFallView>
+ 
 </view>
+
 
 <view wx:if="{{noResult}}" class="no-res">什么也没有哦</view>

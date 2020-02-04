@@ -8,10 +8,10 @@ var avatarWrapper = require('../../tools/avatarwrap.js')
 Component({
   properties: {},
   data: {
-    list: [{ 'pid': 1, 'test': 100 }, { 'pid': 2, 'test': "200" }],
+    list: [{ 'state': '发布中', 'money': 1, 'start': '十四号楼快递点', 'end': '紫荆公寓九号楼', 'username': '张三', 'score': 2000, 'task': '取一个快递' }, { 'state': '发布中', 'money': 1, 'start': '十四号楼快递点', 'end': '紫荆公寓九号楼', 'username': '李四', 'score': 2000, 'task': '取一个快递' }],
     pids: []
   },
-
+  
   attached: function () {
     wx.getSystemInfo({
       success: (res) => {
@@ -27,6 +27,10 @@ Component({
     /**
      * 填充数据
      */
+    toTaskDetail: function (event) {
+      console.log(event)
+      console.log('get toTaskDetail in WaterFallView')
+    },
     fillData: function (isPull, listData) {
       console.log(isPull)
       console.log(listData)
